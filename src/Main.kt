@@ -1,7 +1,5 @@
-import java.util.Base64
-import kotlin.io.encoding.Base64.Default.decode
-
 fun main(){
+    val decoder = Base64decoder()
     println("Bagheads decoder!!\n how many layers deep? ")
 
     var layerAmount: Int? = null
@@ -18,4 +16,5 @@ fun main(){
 
     print("place your mystery here:")
     val mystery = readln()
+    decoder.decode(mystery)
 }
