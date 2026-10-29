@@ -18,5 +18,5 @@ fun main(){
     val mystery = readln()
     decoder.decode(mystery)
     val base64result = decoder.decode(mystery)
-    println("Result: $base64result")
+
 }
