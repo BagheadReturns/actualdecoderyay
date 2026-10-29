@@ -2,8 +2,9 @@ package ciphers
 
 class Caesar(
     var n: Int,
-    val charset: String
-): Decoder {
+    val charset: String,
+    override val name: String
+): Cipher{
     private val map: Map<Char, Char> = makeMap()
     private val decodeMap: Map<Char, Char> =
         map.entries.associate { (key, value) -> value to key }
@@ -14,7 +15,7 @@ class Caesar(
         }.toMap()
     }
 
-    fun encode(mystery: String): String {
+    override fun encode(mystery: String): String {
         return mystery.map { char ->
             map[char] ?: char
         }.joinToString("")
