@@ -16,7 +16,7 @@ fun main(){
 
     print("place your mystery here:")
     val mystery = readln()
-    decoder.decode(mystery)
-    val base64result = decoder.decode(mystery)
+    decoder.decodebase64(mystery)
+    val base64result = decoder.decodebase64(mystery)
 
 }
